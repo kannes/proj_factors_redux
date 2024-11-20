@@ -2,7 +2,7 @@
 name=Projection Factors Redux
 qgisMinimumVersion=3.20
 description=Calculates various cartographic projection properties as a raster layer
-version=0.1
+version=0.9
 author=Johannes Kröger
 email=qgis@johanneskroeger.de
 experimental=True
