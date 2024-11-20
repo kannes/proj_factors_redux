@@ -5,6 +5,23 @@ A QGIS plugin to calculate various cartographic projection properties.
 
 Click the icon in the plugins toolbar, wait a while, inspect the resulting raster layer's bands.
 
+## Examples
+### Angular distortion over Europe in EPSG:3035 (ETRS89-extended / LAEA Europe)
+![3035](https://github.com/user-attachments/assets/d656448c-9890-4aed-b771-8eb046abca36)
+
+### Meridional Scale over Germany in EPSG:25832 (ETRS89 / UTM zone 32N)
+![25832](https://github.com/user-attachments/assets/8de5e4cc-e7c2-4f20-a31f-e69903bf90a5)
+
+
+## Technical explanation
+Basically all it does is:
+- Generate a point for each canvas pixel
+- Transform them to WGS84
+- Calculate the project CRS' projection factors for each
+- Generate a raster band per projection factor
+- Build a GeoTIFF with all the raster bands
+- Create a VRT to add band names (workaround for PyQGIS not allowing to set raster band names)
+
 ## Notes
 This plugin has been developed off and on again over several years.
 From the first steps in PyQGIS until today.
@@ -29,3 +46,9 @@ In your `QGIS3.ini`, set
 [ProjectionFactorsRedux]
 useProj=false
 ```
+
+# Thanks to
+- The [proj](https://proj.org/) and [QGIS](https://www.qgis.org/) developers for being awesome
+- [Nyall Dawson](https://north-road.com/) for exposing [proj's `proj_factors`](https://proj.org/en/latest/development/reference/functions.html#c.proj_factors) in PyQGIS as [QgsProjectionFactors](https://qgis.org/pyqgis/master/core/QgsProjectionFactors.html)
+- [Javier Jimenez Shaw](https://javier.jimenezshaw.com/) for great feedback and ideas
+- Marcel for the initial idea
