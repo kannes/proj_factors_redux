@@ -6,6 +6,9 @@ A QGIS plugin to calculate various cartographic projection properties.
 Click the icon in the plugins toolbar, wait a while, inspect the resulting raster layer's bands.
 
 ## Examples
+### Areal Scale in EPSG:3857 (WGS 84 / Pseudo-Mercator)
+![3857 areal scale](https://github.com/user-attachments/assets/57a1b919-d764-4432-9280-214d0ffaa1d6)
+
 ### Angular distortion over Europe in EPSG:3035 (ETRS89-extended / LAEA Europe)
 ![3035](https://github.com/user-attachments/assets/d656448c-9890-4aed-b771-8eb046abca36)
 
