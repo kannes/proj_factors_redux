@@ -1,0 +1,19 @@
+[general]
+name=Projection Factors Redux
+qgisMinimumVersion=3.20
+description=Calculates various cartographic projection properties as a raster layer
+version=0.1
+author=Johannes Kröger
+email=qgis@johanneskroeger.de
+experimental=True
+about=Calculates various cartographic projection properties as a raster layer, such as scales, scale factors, angular distortion and meridian convergence. A raster band is created per property.<br>
+      This uses PROJ's <a href="https://proj.org/en/latest/development/reference/functions.html#c.proj_factors">proj_factors</a> function which is exposed by QGIS' <a href="https://qgis.org/pyqgis/3.20/core/QgsCoordinateReferenceSystem.html#qgis.core.QgsCoordinateReferenceSystem.factors">QgsCoordinateReferenceSystem API</a> since 3.20.<br>
+      For more information on the properties themselves, please consult the <a href="https://proj.org/en/latest/development/reference/datatypes.html#c.PJ_FACTORS">PROJ documentation</a>.<br>
+      This has not been thoroughly tested and should not be used for analytical purposes yet. Surely there are some errors. If you know that this all works fine, please contact the author.
+      Inspired by https://plugins.qgis.org/plugins/ProjFactors-gh-pages/
+icon=resources/icons/icon.png
+tags=python,projection,cartography,proj
+category=Raster
+homepage=https://github.com/kannes/proj_factors_redux
+repository=https://github.com/kannes/proj_factors_redux
+tracker=https://github.com/kannes/proj_factors_redux/issues
