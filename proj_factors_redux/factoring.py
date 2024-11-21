@@ -270,7 +270,7 @@ def create_vrt_for_factors_tif(tif_path: str) -> str:
 def gather_factors_pyproj(
     points,
     crs,
-) -> List[Union[pyproj.proj.Factors, None]]:
+) -> List[Union["pyproj.proj.Factors", None]]:
     """Using pyproj directly to avoid QGIS' repeated creation and use of a transformation. ~4 times faster.
 
     Thanks to @jjimenezshaw for the suggestion!
